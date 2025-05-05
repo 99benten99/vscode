@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int midterm, final;
+    cin >> midterm;
+    cin >> final;
+
+    int total = midterm + final;
+    cout << total << endl;
+
+    if (total >= 50) {
+        cout << "pass" << endl;
+    } else {
+        cout << "fail" << endl;
+    }
+
+    return 0;
+}

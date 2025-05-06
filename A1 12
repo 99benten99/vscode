@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    char op;
+    cin >> number;
+    cin >> op;
+
+    int tens = number / 10;
+    int ones = number % 10;
+
+    int reversed;
+    if (ones == 0) {
+        reversed = tens;
+    } else {
+        reversed = ones * 10 + tens;
+    }
+
+    if (op == '+') {
+        cout << number << " + " << reversed << " = " << number + reversed << endl;
+    } else if (op == '*') {
+        cout << number << " * " << reversed << " = " << number * reversed << endl;
+    } else {
+        cout << "Invalid operator" << endl;
+    }
+
+    return 0;
+}

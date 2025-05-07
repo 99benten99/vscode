@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string firstName, lastName;
+    int age;
+    cin >> firstName >> lastName >> age;
+
+    string password;
+
+    if (firstName.length() > 5 && lastName.length() > 5) {
+        password += firstName.substr(0, 2);
+        password += lastName[lastName.length() - 1];
+        password += to_string(age % 10);
+    } else {
+        password += firstName[0];
+        password += to_string(age);
+        password += lastName[lastName.length() - 1];
+    }
+
+    cout << password << endl;
+
+    return 0;
+}
